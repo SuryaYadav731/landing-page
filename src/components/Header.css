@@ -1,0 +1,82 @@
+/* Main Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+  }
+  
+  /* Logo Styling */
+  .logo img {
+    height: 50px; /* Adjust the height based on your logo's size */
+    width: auto;
+  }
+  
+  /* Navigation Links Styling */
+  .nav-links {
+    display: flex;
+    gap: 20px; /* More consistent space between links */
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for navigation links */
+  .nav-links a:hover {
+    color: #ff8c00; /* Orange color on hover */
+  }
+  
+  /* Cart Styling */
+  .cart {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .cart .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+  
+  /* Styling for Cart Icon */
+  .cart i {
+    font-size: 1.5rem;
+  }
+  
+  /* Mobile Responsive Styling */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      margin-top: 15px;
+    }
+  
+    .cart {
+      margin-top: 20px;
+    }
+  
+    .logo img {
+      height: 40px; /* Smaller logo on mobile */
+    }
+  }
+  

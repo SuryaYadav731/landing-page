@@ -1,0 +1,151 @@
+/* .hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 20px;
+    background-color: #f7f7f7;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  .hero-text p {
+    color: #777;
+  }
+  
+  .shop-now-btn {
+    padding: 10px 20px;
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+   */
+
+   .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  .hero-overlay {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .hero-overlay.fade-in {
+    opacity: 1;
+  }
+  
+  .hero-text {
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+    color: white;
+    z-index: 2;
+    animation: slideInLeft 1s ease-out forwards;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  .hero-text p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.8;
+  }
+  
+  .shop-now-btn {
+    background-color: #ff8c00;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .shop-now-btn:hover {
+    transform: translateY(-5px);
+    background-color: #e07b00;
+  }
+  
+  .hero-image {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-overlay {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .hero-text {
+      padding: 20px;
+      flex: 0;
+    }
+  
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    .shop-now-btn {
+      font-size: 1rem;
+      padding: 12px 25px;
+    }
+  }
+  
